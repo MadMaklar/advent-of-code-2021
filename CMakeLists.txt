@@ -18,6 +18,9 @@ include(cmake/Cache.cmake)
 include(cmake/CompilerWarnings.cmake)
 set_project_warnings(project_warnings)
 
+# allow for static analysis options
+include(cmake/StaticAnalyzers.cmake)
+
 option(ENABLE_CONAN "Use Conan for dependency management" ON)
 if(ENABLE_CONAN)
   include(cmake/Conan.cmake)

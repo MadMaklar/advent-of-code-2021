@@ -1,25 +1,22 @@
 #include "sonar_sweep.hpp"
 
 #include <algorithm>
-#include <functional>
-#include <iostream>
 #include <numeric>
 
-int part1(const std::vector<int> &sonar_report){
-    auto difference = forward_difference(sonar_report);
-    return count_positive(difference);
+int part1(const std::vector<int> &sonar_report) {
+  auto difference = forward_difference(sonar_report);
+  return count_positive(difference);
 }
 
-int part2(const std::vector<int> &sonar_report){
-    auto smoothed = sliding_window(sonar_report);
-    auto difference = forward_difference(smoothed);
-    return count_positive(difference);
-
+int part2(const std::vector<int> &sonar_report) {
+  auto smoothed = sliding_window(sonar_report);
+  auto difference = forward_difference(smoothed);
+  return count_positive(difference);
 }
 
 int count_positive(const std::vector<int> &data) {
-  return static_cast<int>(std::count_if(data.begin(), data.end(),
-                                        [](int i) { return i > 0; }));
+  return static_cast<int>(
+      std::count_if(data.begin(), data.end(), [](int i) { return i > 0; }));
 }
 
 std::vector<int> forward_difference(const std::vector<int> &data) {

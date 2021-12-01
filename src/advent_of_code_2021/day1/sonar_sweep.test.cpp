@@ -1,4 +1,5 @@
 #include <catch2/catch.hpp>
+#include <string>
 #include <vector>
 
 #include "sonar_sweep.hpp"
@@ -40,4 +41,3 @@ TEST_CASE(
     REQUIRE(part2(sonar_report) == 5);
   }
 }
-

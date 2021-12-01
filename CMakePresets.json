@@ -3,13 +3,21 @@
     "configurePresets": [
         {
             "name": "default",
-            "displayName": "Custom configure preset",
-            "description": "Sets Ninja generator, build and install directory",
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
                 "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}"
+            }
+        },
+        {
+            "name": "clang",
+            "generator": "Ninja",
+            "binaryDir": "${sourceDir}/build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install/${presetName}",
+                "CMAKE_CXX_COMPILER": "/bin/clang++-13"
             }
         }
     ],
@@ -17,6 +25,10 @@
         {
             "name": "default",
             "configurePreset": "default"
+        },
+        {
+            "name": "clang",
+            "configurePreset": "clang"
         }
     ],
     "testPresets": [
@@ -28,7 +40,18 @@
             },
             "execution": {
                 "noTestsAction": "error",
-                "stopOnFailure": true
+                "stopOnFailure": false
+            }
+        },
+        {
+            "name": "clang",
+            "configurePreset": "clang",
+            "output": {
+                "outputOnFailure": true
+            },
+            "execution": {
+                "noTestsAction": "error",
+                "stopOnFailure": false
             }
         }
     ]

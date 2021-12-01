@@ -5,5 +5,14 @@
     "C/C++ Include Guard.Path Skip": 1,
     "C/C++ Include Guard.Remove Extension": false,
     "C/C++ Include Guard.Path Depth": 0,
-    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json"
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "editor.guides.bracketPairs": "active",
+    "editor.rulers": [
+        80
+    ],
+    "iwyu.comments": false,
+    "iwyu.no_fwd_decls": true,
+    "iwyu.reorder": true,
+    "iwyu.safe": true,
+    "iwyu.transitive_includes_only": true
 }
