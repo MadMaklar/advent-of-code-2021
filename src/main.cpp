@@ -1,5 +1,6 @@
 #include <advent_of_code_2021/day1/sonar_sweep.hpp>
 #include <advent_of_code_2021/day2/dive.hpp>
+#include <advent_of_code_2021/day3/binary_diagnostic.hpp>
 
 #include <algorithm>
 #include <filesystem>
@@ -29,4 +30,15 @@ int main() {
 
   std::cout << "Answer day 2, part 1: " << day2_part1(day2_data) << '\n';
   std::cout << "Answer day 2, part 2: " << day2_part2(day2_data) << '\n';
+
+  std::filesystem::path day3_data_path =
+      "/home/daniel/git/advent-of-code-2020/data/day3.txt";
+  std::ifstream day3_data_file(day3_data_path);
+  std::vector<std::string> day3_data;
+  while (std::getline(day3_data_file, line)) {
+    day3_data.push_back(line);
+  }
+
+  std::cout << "Answer day 3, part 1: " << day3_part1(day3_data) << '\n';
+  std::cout << "Answer day 3, part 2: " << day3_part2(day3_data) << '\n';
 }
