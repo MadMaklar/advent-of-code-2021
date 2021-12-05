@@ -20,11 +20,8 @@ macro(run_conan)
   include(${CMAKE_BINARY_DIR}/conan.cmake)
 
   # Add (or remove) remotes as needed conan_add_remote(NAME conan-center URL
-  # https://conan.bintray.com)
-  conan_add_remote(NAME cci URL https://center.conan.io INDEX 0)
-  conan_add_remote(
-    NAME bincrafters URL
-    https://bincrafters.jfrog.io/artifactory/api/conan/public-conan)
+  # https://conan.bintray.com) conan_add_remote(NAME cci URL
+  # https://center.conan.io INDEX 0)
 
   # For multi configuration generators, like VS and XCode
   if(NOT CMAKE_CONFIGURATION_TYPES)

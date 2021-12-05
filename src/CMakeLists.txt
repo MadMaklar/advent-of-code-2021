@@ -1,10 +1,11 @@
 find_package(Catch2 REQUIRED)
+find_package(Boost REQUIRED)
 
 include(CTest)
 include(Catch)
 
 add_library(lib)
-target_link_libraries(lib PRIVATE project_warnings)
+target_link_libraries(lib PRIVATE project_warnings Boost::boost)
 target_include_directories(lib PUBLIC ${CMAKE_CURRENT_LIST_DIR})
 
 add_executable(run main.cpp)

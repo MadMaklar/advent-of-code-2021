@@ -1,5 +1,6 @@
 [requires]
 catch2/2.13.7
+boost/1.77.0
 
 [generators]
 cmake_find_package

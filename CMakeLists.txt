@@ -27,6 +27,9 @@ if(ENABLE_CONAN)
   run_conan()
 endif()
 
+set(CMAKE_CXX_STANDARD 17)
+add_compile_options(-std=c++17)
+
 if(ENABLE_TESTING)
   enable_testing()
   message("Building Tests.")
