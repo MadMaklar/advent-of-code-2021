@@ -2,6 +2,7 @@
 #include <advent_of_code_2021/day2/dive.hpp>
 #include <advent_of_code_2021/day3/binary_diagnostic.hpp>
 #include <advent_of_code_2021/day4/giant_squid.hpp>
+#include <advent_of_code_2021/day5/hydrothermal_venture.hpp>
 #include <algorithm>
 #include <fstream> // IWYU pragma: keep
 #include <iostream>
@@ -52,5 +53,9 @@ int main() {
 
   auto input = read_input("/home/daniel/git/advent-of-code-2020/data/day4.txt");
   std::cout << "Answer day 4, part 1: " << day4_part1(input) << '\n';
-  std::cout << "Answer day 4, part 1: " << day4_part2(input) << '\n';
+  std::cout << "Answer day 4, part 2: " << day4_part2(input) << '\n';
+
+  input = read_input("/home/daniel/git/advent-of-code-2020/data/day5.txt");
+  std::cout << "Answer day 5, part 1: " << day5_part1(input) << '\n';
+  std::cout << "Answer day 5, part 2: " << day5_part2(input) << '\n';
 }
